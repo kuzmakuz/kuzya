@@ -1,0 +1,23 @@
+// =============================================
+// HEADER
+// =============================================
+
+%header-style {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    z-index: 1;
+}
+
+header {
+    top: 0;
+    @extend %header-style;
+
+    &:after {
+        @include clearfix;
+    }
+
+    @include bp(max-width, 767px) {
+        border-bottom: 5px solid gray;
+    }
+}

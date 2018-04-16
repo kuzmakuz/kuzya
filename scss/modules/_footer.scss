@@ -1,0 +1,23 @@
+// =============================================
+// FOOTER
+// =============================================
+
+footer {
+    bottom: 0;
+    @extend %header-style;
+    @include transition(all 0.5s ease);
+
+
+    .header-nav {
+        height: 20px;
+        @include transition(all 0.5s ease);
+    }
+
+    &:hover {
+        .header-nav {
+            height: 150px;
+        }
+    }
+}
+
+// zachem  @include transition 2 raza ????

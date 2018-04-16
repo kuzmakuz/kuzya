@@ -1,0 +1,237 @@
+// =============================================
+// Main
+// =============================================
+body {
+    padding-bottom: 100px;
+}
+
+%section-space {
+    padding: 140px 0;
+}
+
+section.part-01 {
+    background: url("../img/bg.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+
+    @extend %section-space;
+
+    h2 {
+        color: $white;
+        opacity: 0.7;
+        font-size: 50px;
+        text-transform: uppercase;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+    }
+}
+
+section.part-02 {
+    background-color: $gray;
+
+    &, ul, li {
+        height: 100vh;
+    }
+
+    ul.slider {
+        li {
+            padding-top: 300px;
+        }
+
+        h1 {
+            margin-bottom: $space;
+            color: $white;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .bx-pager {
+        bottom: 190px;
+        position: absolute;
+        width: 100%;
+    }
+}
+
+section.part-03 {
+    & {
+        text-align: center;
+        @extend %section-space;
+    }
+
+    ul {
+        margin: 0 #{-$space};
+
+        &:after {
+            @include clearfix;
+        }
+
+        li {
+            width: percentage(1/4);
+            padding: 0 $space;
+            float: left;
+            margin-bottom: $space *2;
+
+            &:nth-child(4n+1) {
+                clear: left;
+            }
+
+            @include bp(max-width, 767px) {
+                width: percentage(1/2);
+
+                &:nth-child(2n+1) {
+                    clear: left;
+                }
+            }
+        }
+
+        .img {
+            background: $gray;
+            position: relative;
+            background-size: cover;
+            background-position: top center;
+            margin-bottom: $space;
+
+            &:before {
+                content: '';
+                display: block;
+                width: 100%;
+                padding-bottom: 100%;
+            }
+        }
+
+        img {
+            width: 100%;
+            position: absolute;
+            top: 0;
+        }
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                .img {
+                    opacity: 0.7;
+                }
+
+                h2 {
+                    color: $basedark;
+                }
+            }
+        }
+    }
+}
+
+section.part-04 {
+    & {
+        background: url("../img/bg.jpg");
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        @extend %section-space;
+    }
+
+    h3, h2, p {
+        color: $white;
+    }
+
+    h3:after {
+        background-color: $white;
+    }
+
+     > p {
+         color: yellow;
+     }
+
+    ul {
+        //margin: 0 #{-$space};
+
+        max-width: 90%;
+        margin: auto;
+
+        &:after {
+            @include clearfix;
+        }
+
+        li {
+            @include sv;
+            width: percentage(1/3);
+            float: left;
+            padding: 0 $space;
+            margin-bottom: $space *2;
+            position: relative;
+
+            &:nth-child(4) {
+                display: none;
+            }
+
+            @include bp(max-width, 767px) {
+                width: percentage(1/2);
+
+                &:nth-child(4) {
+                    display: block;
+                }
+            }
+
+            @include bp(max-width, 580px) {
+                width: percentage(1);
+            }
+        }
+
+        .img {
+            @include sv;
+            background-color: $gray;
+            width: 100%;
+            background-size: cover;
+
+            &:before {
+                content: '';
+                display: block;
+                padding-bottom: 50%;
+            }
+        }
+
+        h2, p {
+            position: absolute;
+            left: $space * 2;
+            padding-right: $space * 2;
+            //visibility: hidden;
+            //color: transparent;
+            opacity: 0;
+            @include text-shadow(1px 1px 1px $black);
+            @include transition(all 0.5s ease);
+        }
+
+        h2 {
+            top: $space;
+        }
+
+        p {
+            bottom: $space;
+            margin-bottom: 0;
+        }
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                cursor: pointer;
+
+                h2, p {
+                    opacity: 1;
+                    //color: $white;
+                    //visibility: visible;
+                }
+            }
+        }
+
+    }
+}

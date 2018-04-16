@@ -1,0 +1,53 @@
+// =============================================
+// Main-logo
+// =============================================
+
+// Variables
+
+$logo-base-font-family: "Lobster" !default;
+$logo-base-font-size: 30px !default;
+$logo-base-margin: 20px !default;
+$logo-base-color: $white !default;
+
+
+// Styles
+
+.main-logo {
+    & {
+        font-size: $logo-base-font-size;
+        font-family: $logo-base-font-family;
+        margin: $logo-base-margin;
+        color: $logo-base-color;
+        cursor: pointer;
+        text-decoration: none;
+        float: left;
+        position: relative;
+    }
+
+    > b {
+        position: absolute;
+        color: #eee;
+        top: -6px;
+        right: 0;
+        font-size: 15px;
+    }
+
+    &:hover {
+        opacity: 0.9;
+        @include text-shadow(1px 1px 3px $black);
+    }
+
+    @include bp(max-width, 767px) {
+        color: darkorange;
+    }
+
+    // Variants
+
+    &.-small {
+        font-size: 20px;
+
+        > b{
+            font-size: 10px;
+        }
+    }
+}

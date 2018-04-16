@@ -1,0 +1,41 @@
+// =============================================
+// Header-nav
+// =============================================
+
+.header-nav {
+    float: right;
+    margin: 30px 0;
+
+    a {
+        color: $white;
+        text-decoration: none;
+        margin-left: 30px;
+        position: relative;
+        @include transition(all 0.5s ease);
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            width: 20px;
+            height: 2px;
+            left: 50%;
+            background-color: transparent;
+
+            @include transition(all 0.5s ease);
+            @include transform(translate(-50%, 0));
+        }
+
+        &:hover {
+            color: $base;
+
+            &:after {
+                background-color: $white;
+            }
+        }
+    }
+}

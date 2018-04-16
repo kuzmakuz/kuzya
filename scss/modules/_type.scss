@@ -1,0 +1,78 @@
+// =============================================
+// Typography
+// =============================================
+
+// Variables
+
+$type-font-size: 13px;
+$type-font-family: $font-serif;
+$type-font-line-height: 1.2;
+$type-font-margin-bottom: 1em;
+$type-font-align: left;
+
+// Styles
+
+a {
+    color: $base;
+
+    &:hover {
+        color: $basedark;
+    }
+}
+
+p {
+    font-size: $type-font-size;
+    line-height: $type-font-line-height;
+    color: $black;
+    font-family: $font-serif;
+    margin-bottom: $type-font-margin-bottom;
+    text-align: $type-font-align;
+}
+
+h1 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: $white;
+    font-size: 35px;
+    font-family: $font-serif;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 0.01em;
+    font-weight: bold;
+    font-family: $font-serif;
+    color: $base;
+    text-align: left;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+    color: $base;
+    font-family: $font-design;
+    text-align: center;
+    @include sv;
+    position: relative;
+    display: inline-block;
+    margin-bottom: $space * 2;
+    letter-spacing: .5em;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        width: 80%;
+        height: 2px;
+        left: 50%;
+        background-color: $base;
+
+        @include transform(translate(-50%, 0));
+    }
+}
+
+h4 {
+
+}
