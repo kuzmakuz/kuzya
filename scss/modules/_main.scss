@@ -235,3 +235,57 @@ section.part-04 {
 
     }
 }
+
+section.part-05 {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    min-height: 400px;
+    background-image: url("../img/bg2.png");
+    background-position: center;
+    background-size: cover;
+
+    h2 {
+        font-weight: normal;
+        color: green;
+        letter-spacing: 0.1em;
+        margin-bottom: 30px;
+
+        strong {
+            display: block;
+            font-weight: bold;
+            color: $white;
+        }
+    }
+
+    p {
+
+    }
+
+    .show-more {
+        color: $white;
+    }
+
+    .one  {
+        float: left;
+        width: 70%;
+        min-height: 100px;
+        padding-right: 30px;
+    }
+
+    .two {
+        float: left;
+        width: 30%;
+        min-height: 200px;
+        background-color: pink;
+        padding: $space;
+
+        h2 {
+            margin-bottom: 5px;
+            color: red;
+        }
+
+        > form {
+          margin-bottom: 20px;
+        }
+    }
+}

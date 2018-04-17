@@ -1,0 +1,41 @@
+// =============================================
+// Inputs
+// =============================================
+
+$button-def-height: $input-height;
+$button-def-padding: 0 10px;
+//button-def-bg-color
+//button-def-bg-hover-color
+//button-def-color
+//button-def-hover-color
+$uppercase: true;
+
+
+.button {
+  display: block;
+  height: $button-def-height;
+  line-height: $button-def-height;
+  padding: 0 10px;
+  margin: 5px 0 10px 0;
+  font-size: 14px;
+  width: 100%;
+  color: $white;
+  background-color: $base;
+  text-decoration: none;
+  border: none;
+  text-align: center;
+  @if ($uppercase) {
+    text-transform: uppercase;
+  }
+}
+
+&:hover {
+  cursor: pointer;
+  background-color: $basedark;
+}
+
+&.-second {
+
+}
+
+}
